@@ -28,6 +28,7 @@ function add() {
 
 const addNums = add(1, 2, 3, 4)
 console.log(addNums)
+console.log(typeof(addNums))
 
 
 // example using a rest parameter
@@ -76,3 +77,17 @@ console.log(remainder2(13, 4))
 // function expression using arrow syntax and one parameter
 const sqr = num => num * num
 console.log(sqr(4))
+
+const multiply = (a, b) => a * b
+console.log(multiply(2, 4))
+console.log(multiply(4)) //NaN is shown
+
+const multiply2 = (a, b = 1) => a * b
+console.log(multiply2(4)) //nothing happen
+console.log(multiply2()) //NaN is shown
+
+const multiply3 = (a = 1, b = 1) => a * b
+console.log(multiply3())
+
+const squareRoot = a => Math.sqrt(a)
+console.log(squareRoot(5))

@@ -31,6 +31,12 @@ try {
  * @throws  {TypeError} if the parameter is not a valid email address.
  */
 function validateEmail(email) {
+  const minLen = 5
+  const at_pos = email.indexOf('@')
+  const dot_pos = email.indexOf('.')
+  if (email.length < minLen || at_pos <=0 || dot_pos <= 0 || dot_pos < at_pos) {
+    throw new SyntaxError('email is not in valid format')
+  } else 
 	console.log(email)
 	return true
 }
